@@ -1,0 +1,28 @@
+.header-text{
+    font-size: 30px;
+    margin-top: 10px;
+    color: #12538b;
+    text-align: center;
+}
+.discription-text{
+    font-size: 20px;
+    margin-top: 15px;
+}
+.block-Menu-specialists{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+.menu-specialists{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+    row-gap: 25px;
+    margin: 30px auto;
+}
+.text-link-request{
+    cursor: pointer;
+    font-size: 22px;
+    color: #12538b;
+}

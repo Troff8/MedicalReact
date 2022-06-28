@@ -1,0 +1,32 @@
+.main-page{
+    margin-bottom: 30px;
+}
+.header-text{
+    font-size: 30px;
+    margin-top: 10px;
+    color: #12538b;
+    text-align: center;
+}
+.discription-text{
+    font-size: 15px;
+    margin-top: 15px;
+}
+.contacts-fields{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+.text-field{
+    width: 350px;
+}
+.block-button{
+    width: 300px;
+}
+.map-field{
+    display: flex;
+    justify-content: center;
+}
+.contacts-map{
+    width: 500px;
+}
