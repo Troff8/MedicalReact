@@ -1,37 +1,39 @@
-.header-text{
+.header-text {
     font-size: 30px;
     margin-top: 10px;
     color: #12538b;
     text-align: center;
 }
-.discription-text{
+.discription-text {
     font-size: 20px;
     margin-top: 15px;
 }
-.block-Menu-specialists{
+.block-Menu-specialists {
     display: flex;
     align-items: center;
     justify-content: center;
     padding-bottom: 50px;
 }
-.menu-specialists{
+.menu-specialists {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 25px;
     row-gap: 25px;
     margin: 30px auto;
 }
-.text-link-request{
+.text-link-request {
     cursor: pointer;
     font-size: 22px;
     color: #12538b;
 }
 
 @media (max-width: 500px) {
-    .menu-specialists{
+    .menu-specialists {
         grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        row-gap: 15px;
     }
-    .discription-text{
+    .discription-text {
         text-align: center;
     }
 }

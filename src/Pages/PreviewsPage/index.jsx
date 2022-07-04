@@ -10,7 +10,9 @@ const PreviewsPage = () => {
     return (
         <div className={styles.mainPage}>
             <Slider menuItems={[slider1Image, slider2Image, slider3Image, slider4Image]} />
-            <div className={styles.headerText}>Профосмотры</div>
+            <div className={styles.headerText} id='titleText'>
+                Профосмотры
+            </div>
             <div className={styles.discriptionText}>
                 Специалистами клиники осуществляется проведение комплексных профилактических осмотров частных лиц и сотрудников
                 предприятий.

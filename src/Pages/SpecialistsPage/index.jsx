@@ -15,7 +15,9 @@ const SpecialistsPage = ({ availabilitySlider }) => {
     return (
         <div className={styles.specialistsPage}>
             {!availabilitySlider ? <Slider menuItems={[slider1Image, slider2Image, slider3Image, slider4Image]} /> : null}
-            <div className={styles.headerText}>Специалисты</div>
+            <div className={styles.headerText} id='titleText'>
+                Специалисты
+            </div>
             <div className={styles.discriptionText}>
                 Наши специалисты - одни из лучших в Самарской области и по праву заслужили благодарность многих пациентов своим
                 высоким профессионализмом, точностью работы и человеческой отзывчивостью к нуждам пациентов. И мы гордимся

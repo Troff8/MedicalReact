@@ -42,6 +42,7 @@
     }
     .navigation-menu-list {
         flex-direction: column;
+        transition: 0.5s;
     }
     .navigation-menu-item {
         margin: 5px;
@@ -58,13 +59,13 @@
     .open-menu:hover {
         color: #072a48;
     }
-    .btn-menu{
+    .btn-menu {
         width: 25px;
         height: 25px;
         padding-inline: 30px;
         position: relative;
     }
-    .btn-menu:before{
+    .btn-menu:before {
         content: '';
         top: 0;
         position: absolute;
@@ -72,7 +73,7 @@
         height: 2px;
         background-color: rgb(40, 129, 206);
     }
-    .btn-menu::after{
+    .btn-menu::after {
         content: '';
         bottom: 0;
         position: absolute;
@@ -80,12 +81,24 @@
         height: 2px;
         background-color: rgb(40, 129, 206);
     }
-    .btn-menu span{
+    .btn-menu span {
         content: '';
         top: 11px;
         position: absolute;
         width: 25px;
         height: 2px;
         background-color: rgb(40, 129, 206);
+    }
+    .btn-menu-active .btn-menu {
+        opacity: 0;
+    }
+    .navigation-menu-list {
+        transform: translateX(-150%);
+        animation: ani 1s forwards;
+    }
+
+    @keyframes ani {
+        0% {transform: translateX(-150%);}
+        100% {transform: translateY(0);}
     }
 }

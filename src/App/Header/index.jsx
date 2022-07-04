@@ -30,9 +30,9 @@ const Header = ({ isMobile }) => {
                         <div className={styles.blockNumber}>
                             <img className={styles.imageInfoContacts} src={callImage} />
                             <div className={styles.textTelephone}>
-                                <span className={styles.City}>Чапаевск</span>
+                                <span className={styles.City}>Чапаевск </span>
                                 <a href='tel:+78463930092'>
-                                    +7 (84639)
+                                    +7(84639)
                                     <span className={styles.numberPhone}> 3-00-92 </span>
                                 </a>
                             </div>
@@ -40,7 +40,7 @@ const Header = ({ isMobile }) => {
                         <div className={styles.blockNumber}>
                             <img className={styles.imageInfoContacts} src={callImage} />
                             <div className={styles.textTelephone}>
-                                <span className={styles.City}>Безенчук </span>
+                                <span className={styles.City}>Безенчук</span>
                                 <span className={styles.numberPhone}>
                                     <a href='tel:+78463930092'> +7 (927) 750-56-56 </a>
                                 </span>

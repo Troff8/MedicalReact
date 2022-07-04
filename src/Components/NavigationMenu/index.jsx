@@ -11,12 +11,17 @@ const NavigationMenu = ({ menuItems, isMobile }) => {
             menuItems &&
             menuItems.map((item, index) => {
                 return (
-                    <Link key={index} className={styles.navigationMenuItem} to={item.link}>
+                    <Link key={index} className={styles.navigationMenuItem} to={item.link} onClick={() => moveScrollPage()}>
                         <span className={styles.navigationMenuItemText}>{item.name}</span>
                     </Link>
                 )
             })
         )
+    }
+    const moveScrollPage = () => {
+        document.getElementById('titleText').scrollIntoView({
+            behavior: 'smooth'
+        })
     }
 
     if (!isMobile) {
@@ -36,7 +41,7 @@ const NavigationMenu = ({ menuItems, isMobile }) => {
                         setStatusMenu(!statusMenu)
                     }}
                 >
-                    <div className={styles.btnMenu}>
+                    <div className={`${styles.btnMenu} ${statusMenu ? styles.btnMenuActive : null}`}>
                         <span> </span>
                     </div>
                     {statusMenu ? <div> Закрыть меню </div> : <div> Открыть меню </div>}

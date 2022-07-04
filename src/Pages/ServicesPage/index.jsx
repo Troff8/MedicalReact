@@ -11,7 +11,9 @@ const ServicesPage = () => {
     return (
         <div className={styles.mainPage}>
             <Slider menuItems={[slider1Image, slider2Image, slider3Image, slider4Image]} />
-            <div className={styles.headerText}>Услуги</div>
+            <div className={styles.headerText} id='titleText'>
+                Услуги
+            </div>
             <div className={styles.listServices}>
                 <Service
                     img={require('../../images/speleoterapiya.jpg')}

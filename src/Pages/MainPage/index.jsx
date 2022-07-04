@@ -14,7 +14,9 @@ const MainPage = () => {
             <div className={styles.mainPage}>
                 <Slider menuItems={[slider1Image, slider2Image, slider3Image, slider4Image]} />
                 <div className={styles.blockText}>
-                    <div className={styles.headerText}>Консультативно-диагностическая поликлиника</div>
+                    <div id='titleText' className={styles.headerText}>
+                        Консультативно-диагностическая поликлиника
+                    </div>
                     <div className={styles.smallHeaderText}>
                         Вы не можете решить возникшие проблемы со здоровьем или хотите его сохранить? Мы знаем, как это сделать!
                     </div>
@@ -35,7 +37,7 @@ const MainPage = () => {
                     <CardHospital
                         title={'Чапаевск'}
                         address={'Чапаевск, ул. Ватутина, д. 11'}
-                        timeJobs={'Будни:8:00-19:00,Суббота 8:00-17:00'}
+                        timeJobs={'Будни:8:00-19:00'}
                         phoneNumber={'+7 (84639) 3-00-92 '}
                     />
                     <CardHospital

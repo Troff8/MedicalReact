@@ -15,7 +15,9 @@ const ContactsPage = () => {
     return (
         <div className={styles.mainPage}>
             <Slider menuItems={[slider1Image, slider2Image, slider3Image, slider4Image]} />
-            <div className={styles.headerText}>Контакты</div>
+            <div className={styles.headerText} id='titleText'>
+                Контакты
+            </div>
             <div className={styles.contactsFields}>
                 <div className={styles.textField}>
                     <div className={styles.smallHeaderText}>ООО «Консультативно-диагностическая поликлиника»</div>

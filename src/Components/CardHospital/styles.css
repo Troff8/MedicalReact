@@ -24,6 +24,7 @@
 }
 @media (max-width: 500px) {
     .card-hospital{
+        width: 100%;
         margin: 10px;
     }
     .block-info{
