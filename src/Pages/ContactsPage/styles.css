@@ -30,3 +30,11 @@
 .contacts-map{
     width: 500px;
 }
+@media (max-width: 500px) {
+    .contacts-fields{
+        flex-direction: column;
+    }
+    .block-button{
+        width: 100%;
+    }
+}

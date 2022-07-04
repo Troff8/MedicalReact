@@ -24,9 +24,6 @@ const Footer = () => {
                         <Link className={styles.menuItem} to='/previews'>
                             Профосмотры
                         </Link>
-                        <Link className={styles.menuItem} to='/price'>
-                            Цены
-                        </Link>
                         <Link className={styles.menuItem} to='/contacts'>
                             Контакты
                         </Link>

@@ -1,4 +1,4 @@
-.block-type-doctor{
+.block-type-doctor {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,8 +12,15 @@
     background-color: #b0c7da;
     box-shadow: 0px 0px 10px rgb(31, 101, 162);
 }
-.block-title{
+.block-title {
     text-align: center;
     font-size: 20px;
     color: #12538b;
+}
+
+@media (max-width: 500px) {
+    .block-title {
+        font-weight: 600;
+        font-size: 14px;
+    }
 }

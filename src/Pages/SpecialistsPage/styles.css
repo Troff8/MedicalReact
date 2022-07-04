@@ -26,3 +26,12 @@
     font-size: 22px;
     color: #12538b;
 }
+
+@media (max-width: 500px) {
+    .menu-specialists{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .discription-text{
+        text-align: center;
+    }
+}

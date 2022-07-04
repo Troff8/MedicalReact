@@ -36,11 +36,11 @@
 }
 
 @media (max-width: 500px) {
-    .navigation-menu-container{
+    .navigation-menu-container {
         margin: 10px auto;
         width: 90%;
     }
-    .navigation-menu-list{
+    .navigation-menu-list {
         flex-direction: column;
     }
     .navigation-menu-item {
@@ -48,11 +48,44 @@
         box-shadow: 0px 0px 5px rgb(40 129 206);
     }
     .open-menu {
-        font-size: 27px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 26px;
         color: #12538b;
         text-align: center;
     }
-    .open-menu:hover{
+    .open-menu:hover {
         color: #072a48;
+    }
+    .btn-menu{
+        width: 25px;
+        height: 25px;
+        padding-inline: 30px;
+        position: relative;
+    }
+    .btn-menu:before{
+        content: '';
+        top: 0;
+        position: absolute;
+        width: 25px;
+        height: 2px;
+        background-color: rgb(40, 129, 206);
+    }
+    .btn-menu::after{
+        content: '';
+        bottom: 0;
+        position: absolute;
+        width: 25px;
+        height: 2px;
+        background-color: rgb(40, 129, 206);
+    }
+    .btn-menu span{
+        content: '';
+        top: 11px;
+        position: absolute;
+        width: 25px;
+        height: 2px;
+        background-color: rgb(40, 129, 206);
     }
 }

@@ -14,3 +14,9 @@
     font-size: 25px;
     margin-bottom: 30px;
 }
+@media (max-width: 500px) {
+    .title-service{
+        padding-inline: 0px;
+    }
+}
+

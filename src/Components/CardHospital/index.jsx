@@ -16,7 +16,7 @@ const CardHospital = ({ title, address, timeJobs, phoneNumber }) => {
                 </div>
                 <div className={styles.blockInfo}>
                     <img className={styles.imageInfoContacts} src={timeImage} />
-                    Время работы: <span className={styles.infoText}>{timeJobs}</span>
+                    Время: <span className={styles.infoText}>{timeJobs}</span>
                 </div>
                 <div className={styles.blockInfo}>
                     <img className={styles.imageInfoContacts} src={callImage} />

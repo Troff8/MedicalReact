@@ -64,7 +64,10 @@
         height: 110px;
     }
     .text-logo-up {
-        font-size: 36px;
+        font-size: 34px;
+    }
+    .text-logo-down {
+        font-size: 30px;
     }
     .info-number {
         flex-direction: column;

@@ -1,4 +1,4 @@
-.footer{
+.footer {
     display: flex;
     justify-content: space-around;
     width: 70%;
@@ -6,17 +6,17 @@
     border-top: 2px solid rgb(40, 129, 206);
     padding: 10px 30px;
 }
-.menu-footer{
+.menu-footer {
     width: 200px;
     display: flex;
 }
 
-.block-menu{
+.block-menu {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
-.menu-item{
+.menu-item {
     margin: 5px;
     color: #12538b;
     cursor: pointer;
@@ -25,29 +25,41 @@
 .menu-item:hover {
     color: #072a48;
 }
-.block-info{
+.block-info {
     text-align: left;
 }
-.imageInfoContacts{
+.imageInfoContacts {
     width: 23px;
     height: 23px;
     margin-right: 5px;
 }
-.info-field{
+.info-field {
     display: flex;
     align-items: center;
     margin: 5px;
 }
-.down-text{
+.down-text {
     text-align: center;
     color: #12538b;
     cursor: pointer;
     transition-duration: 0.3s;
 }
-.down-text:hover{
+.down-text:hover {
     color: #072a48;
 }
-.down-block-footer{
+.down-block-footer {
     display: flex;
     justify-content: space-around;
+}
+@media (max-width: 500px) {
+    .footer {
+        width: 100%;
+    }
+    .menu-footer {
+        flex-direction: column;
+    }
+    .info-field {
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
 }
