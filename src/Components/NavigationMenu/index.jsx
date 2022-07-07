@@ -41,7 +41,7 @@ const NavigationMenu = ({ menuItems, isMobile }) => {
                         setStatusMenu(!statusMenu)
                     }}
                 >
-                    <div className={`${styles.btnMenu} ${statusMenu ? styles.btnMenuActive : null}`}>
+                    <div className={styles.btnMenu}>
                         <span> </span>
                     </div>
                     {statusMenu ? <div> Закрыть меню </div> : <div> Открыть меню </div>}
