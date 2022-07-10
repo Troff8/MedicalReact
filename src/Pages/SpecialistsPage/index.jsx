@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import Slider from '../../Components/Slider'
 import Modal from '../../Components/Modal'
+import Specialist from '../../Components/Specialist'
 import RequestCall from '../../Components/RequestCall'
 import TypeDoctor from '../../Components/TypeDoctor'
 import slider1Image from '../../images/slider1.png'
@@ -43,7 +44,6 @@ const SpecialistsPage = ({ availabilitySlider }) => {
             <div className={styles.blockMenuSpecialists}>
                 <div className={styles.menuSpecialists}>
                     <TypeDoctor title={'НЕВРОЛОГ'} />
-                    <TypeDoctor title={'НЕВРОЛОГ ДЕТСКИЙ'} />
                     <TypeDoctor title={'ОФТАЛЬМОЛОГ'} />
                     <TypeDoctor title={'ДЕРМАТОВЕНЕРОЛОГ'} />
                     <TypeDoctor title={'ОТОРИНОЛАРИНГОЛОГ'} />
@@ -55,10 +55,20 @@ const SpecialistsPage = ({ availabilitySlider }) => {
                     <TypeDoctor title={'ФУНКЦИОНАЛЬНАЯ ДИАГНОСТИКА'} />
                     <TypeDoctor title={'АКУШЕР-ГИНЕКОЛОГ'} />
                     <TypeDoctor title={'УЛЬТРАЗВУКОВАЯ ДИАГНОСТИКА'} />
-                    <TypeDoctor title={'УЛЬТРАЗВУКОВАЯ ДИАГНОСТИКА'} />
                     <TypeDoctor title={'ЭНДОКРИНОЛОГ'} />
                     <TypeDoctor title={'КАРДИОЛОГ'} />
                 </div>
+            </div>
+            <div className={styles.listSpecialists}>
+                <div className={styles.headerText}>Направление</div>
+                <Specialist
+                    name={'Илья'}
+                    surname={'Трофимов'}
+                    patronymic={'Сергеевич'}
+                    direction={'Узи'}
+                    experience={1}
+                    number={'12131'}
+                />
             </div>
             <Modal isActive={isModalActive} setActive={setIsModalActive} isClosable={false}>
                 <RequestCall setIsModalActive={setIsModalActive} />

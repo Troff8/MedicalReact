@@ -72,12 +72,14 @@ const RequestSms = ({ setIsModalActive }) => {
                         />
                     </div>
                     <div className={styles.inputContainer}>
-                        <input
+                        <textarea
                             placeholder='Сообщение*'
                             onBlur={(e) => {
                                 setPhoneNumber(e.target.value)
                             }}
-                            className={checkStatusText.nameFalse ? `${styles.textInput} ${styles.inputError}` : styles.textInput}
+                            className={
+                                checkStatusText.nameFalse ? `${styles.textAreaInput} ${styles.inputError}` : styles.textAreaInput
+                            }
                         />
                     </div>
                 </div>

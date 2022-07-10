@@ -1,7 +1,7 @@
 .header {
     display: flex;
     justify-content: space-between;
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
 }
 .block-logo {
@@ -19,7 +19,7 @@
     padding-inline: 10px;
 }
 .text-logo-up {
-    font-size: 24px;
+    font-size: 28px;
 }
 .text-logo-down {
     font-size: 30px;
