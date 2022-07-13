@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import { getListAPI } from '../../core/api/apiDcp'
 import Slider from '../../Components/Slider'
 import Modal from '../../Components/Modal'
 import Specialist from '../../Components/Specialist'
@@ -13,6 +14,41 @@ import styles from './styles.css'
 
 const SpecialistsPage = ({ availabilitySlider }) => {
     const [isModalActive, setIsModalActive] = useState(false)
+    const [direction, setDirection] = useState('')
+    const [listDoctors, setListDoctors] = useState()
+    const getListDoctors = async (title) => {
+        setDirection(title)
+        const arrDoctors = await getListAPI(title)
+        const arrlistDoctors = []
+        for (let i = 0; i < arrDoctors.length; i++) {
+            arrlistDoctors.push([
+                arrDoctors[i].name,
+                arrDoctors[i].surname,
+                arrDoctors[i].patronymic,
+                arrDoctors[i].direction,
+                arrDoctors[i].experience,
+                arrDoctors[i].city
+            ])
+        }
+        setListDoctors(arrlistDoctors)
+    }
+    const viewListDoctors = (listDoctors) => {
+        return listDoctors.map((item, index) => {
+            console.log(item[5])
+            return (
+                <Specialist
+                    key={index}
+                    name={item[0]}
+                    surname={item[1]}
+                    patronymic={item[2]}
+                    direction={item[3]}
+                    experience={item[4]}
+                    city={item[5]}
+                    number={item[5] === 'Чапаевск' ? '+7(84639) 3-00-92' : '+7 (927) 750-56-56'}
+                />
+            )
+        })
+    }
     return (
         <div className={styles.specialistsPage}>
             {!availabilitySlider ? <Slider menuItems={[slider1Image, slider2Image, slider3Image, slider4Image]} /> : null}
@@ -43,32 +79,25 @@ const SpecialistsPage = ({ availabilitySlider }) => {
             <div className={styles.headerText}>Направления:</div>
             <div className={styles.blockMenuSpecialists}>
                 <div className={styles.menuSpecialists}>
-                    <TypeDoctor title={'НЕВРОЛОГ'} />
-                    <TypeDoctor title={'ОФТАЛЬМОЛОГ'} />
-                    <TypeDoctor title={'ДЕРМАТОВЕНЕРОЛОГ'} />
-                    <TypeDoctor title={'ОТОРИНОЛАРИНГОЛОГ'} />
-                    <TypeDoctor title={'УРОЛОГ'} />
-                    <TypeDoctor title={'ТЕРАПЕВТ'} />
-                    <TypeDoctor title={'РЕВМАТОЛОГ'} />
-                    <TypeDoctor title={'ХИРУРГ'} />
-                    <TypeDoctor title={'РЕВМАТОЛОГ'} />
-                    <TypeDoctor title={'ФУНКЦИОНАЛЬНАЯ ДИАГНОСТИКА'} />
-                    <TypeDoctor title={'АКУШЕР-ГИНЕКОЛОГ'} />
-                    <TypeDoctor title={'УЛЬТРАЗВУКОВАЯ ДИАГНОСТИКА'} />
-                    <TypeDoctor title={'ЭНДОКРИНОЛОГ'} />
-                    <TypeDoctor title={'КАРДИОЛОГ'} />
+                    <TypeDoctor title={'НЕВРОЛОГ'} handler={getListDoctors} />
+                    <TypeDoctor title={'ОФТАЛЬМОЛОГ'} handler={getListDoctors} />
+                    <TypeDoctor title={'ДЕРМАТОВЕНЕРОЛОГ'} handler={getListDoctors} />
+                    <TypeDoctor title={'ОТОРИНОЛАРИНГОЛОГ'} handler={getListDoctors} />
+                    <TypeDoctor title={'УРОЛОГ'} handler={getListDoctors} />
+                    <TypeDoctor title={'ТЕРАПЕВТ'} handler={getListDoctors} />
+                    <TypeDoctor title={'РЕВМАТОЛОГ'} handler={getListDoctors} />
+                    <TypeDoctor title={'ХИРУРГ'} handler={getListDoctors} />
+                    <TypeDoctor title={'РЕВМАТОЛОГ'} handler={getListDoctors} />
+                    <TypeDoctor title={'ФУНКЦИОНАЛЬНАЯ ДИАГНОСТИКА'} handler={getListDoctors} />
+                    <TypeDoctor title={'АКУШЕР-ГИНЕКОЛОГ'} handler={getListDoctors} />
+                    <TypeDoctor title={'УЛЬТРАЗВУКОВАЯ ДИАГНОСТИКА'} handler={getListDoctors} />
+                    <TypeDoctor title={'ЭНДОКРИНОЛОГ'} handler={getListDoctors} />
+                    <TypeDoctor title={'КАРДИОЛОГ'} handler={getListDoctors} />
                 </div>
             </div>
             <div className={styles.listSpecialists}>
-                <div className={styles.headerText}>Направление</div>
-                <Specialist
-                    name={'Илья'}
-                    surname={'Трофимов'}
-                    patronymic={'Сергеевич'}
-                    direction={'Узи'}
-                    experience={1}
-                    number={'12131'}
-                />
+                <div className={styles.headerText}>{direction}</div>
+                {listDoctors && viewListDoctors(listDoctors)}
             </div>
             <Modal isActive={isModalActive} setActive={setIsModalActive} isClosable={false}>
                 <RequestCall setIsModalActive={setIsModalActive} />

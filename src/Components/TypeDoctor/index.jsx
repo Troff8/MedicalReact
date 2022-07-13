@@ -4,7 +4,7 @@ import styles from './styles.css'
 
 const TypeDoctor = ({ title, handler }) => {
     return (
-        <div className={styles.blockTypeDoctor}>
+        <div className={styles.blockTypeDoctor} onClick={() => handler(title)}>
             <div className={styles.blockTitle}>{title}</div>
         </div>
     )

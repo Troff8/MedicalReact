@@ -1,9 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './styles.css'
 
 const Service = ({ img, title, objText, arrList }) => {
-    useEffect(async () => {}, [])
+    const renderList = () => {
+        return arrList.map((item, index) => {
+            return <li key={index}>{item}</li>
+        })
+    }
     return (
         <div className={styles.cardService}>
             <div className={styles.titleService}>{title}</div>
@@ -12,11 +16,7 @@ const Service = ({ img, title, objText, arrList }) => {
             </div>
             <div className={styles.discriptionService}>{objText.text_one !== undefined ? objText.text_one : ''}</div>
             <div className={styles.discriptionService}>{objText.text_two !== undefined ? objText.text_two : ''}</div>
-            <ul>
-                <li>-</li>
-                <li>-</li>
-                <li>-</li>
-            </ul>
+            <ul>{renderList()}</ul>
             <div className={styles.discriptionService}>{objText.text_three !== undefined ? objText.text_three : ''}</div>
             <div className={styles.discriptionService}>{objText.text_four !== undefined ? objText.text_four : ''}</div>
             <div className={styles.discriptionService}>{objText.text_five !== undefined ? objText.text_five : ''}</div>

@@ -5,34 +5,31 @@ import styles from './styles.css'
 const RequestCall = ({ setIsModalActive }) => {
     const [name, setName] = useState('')
     const [phoneNumber, setPhoneNumber] = useState('')
-    const [checkStatusText, setCheckStatusText] = useState({})
     const validationValues = () => {
         let countStage = 0
-        const objInfoText = {}
+        const errorValues = []
         if (name.length >= 2 && name.length < 15) {
             countStage++
         } else {
-            objInfoText.nameFalse = 'Ошибка ввода имени'
+            errorValues.push('Ошибка ввода имени')
         }
 
         if (validatePhone(phoneNumber)) {
             countStage++
         } else {
-            objInfoText.numberFalse = 'Ошибка ввода телефона'
+            errorValues.push('Ошибка ввода телефона')
         }
         if (countStage === 2) {
-            const objInfoOrder = {
+            const date = new Date().toLocaleDateString('ru-RU') + ' ' + new Date().toLocaleTimeString()
+            const objRequestCall = {
                 name,
                 phoneNumber,
-                operatorCall: 'Запрос на звонок'
+                date
             }
-            console.log('отправлено')
             setIsModalActive(false)
         }
         if (countStage !== 2) {
-            setCheckStatusText(objInfoText)
             setIsModalActive(false)
-            console.log('Ошибка')
         }
     }
     const validatePhone = (phone) => {
@@ -50,7 +47,7 @@ const RequestCall = ({ setIsModalActive }) => {
                             onBlur={(e) => {
                                 setName(e.target.value)
                             }}
-                            className={checkStatusText.nameFalse ? `${styles.textInput} ${styles.inputError}` : styles.textInput}
+                            className={styles.textInput}
                         />
                     </div>
                     <div className={styles.inputContainer}>
@@ -59,7 +56,7 @@ const RequestCall = ({ setIsModalActive }) => {
                             onBlur={(e) => {
                                 setPhoneNumber(e.target.value)
                             }}
-                            className={checkStatusText.nameFalse ? `${styles.textInput} ${styles.inputError}` : styles.textInput}
+                            className={styles.textInput}
                         />
                     </div>
                 </div>
