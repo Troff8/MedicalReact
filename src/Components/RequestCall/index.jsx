@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import { sendRequestCallAPI } from '../../core/api/apiDcp'
 import Button from '../Button'
 import styles from './styles.css'
 const RequestCall = ({ setIsModalActive }) => {
@@ -21,11 +22,7 @@ const RequestCall = ({ setIsModalActive }) => {
         }
         if (countStage === 2) {
             const date = new Date().toLocaleDateString('ru-RU') + ' ' + new Date().toLocaleTimeString()
-            const objRequestCall = {
-                name,
-                phoneNumber,
-                date
-            }
+            sendRequestCallAPI(name, phoneNumber, date)
             setIsModalActive(false)
         }
         if (countStage !== 2) {

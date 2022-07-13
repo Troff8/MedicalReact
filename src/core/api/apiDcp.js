@@ -17,38 +17,37 @@ const getListAPI = async (direction) => {
         console.log('Ошибка получения данных с сервера')
     }
 }
-const setNewTemperature = async (id, temp, date) => {
+const sendRequestCallAPI = async (name, phoneNumber, date) => {
     const options = {
         method: 'POST',
         headers: { 'Content-type': 'application/json' },
         data: {
-            id_device: id,
-            temp,
+            name,
+            telephone: phoneNumber,
             date
         },
-        url: 'http://localhost:8080/api/controllDevice/setNewTemperature'
+        url: 'http://localhost:8080/api/request/setRequest'
     }
     await axios(options).then((res) => {
         return res.data
     })
 }
 
-const createDeviceAPI = async (model, serialNumber, maxTemp, minTemp, description) => {
+const sendMessageAPI = async (name, phoneNumber, email, message, date) => {
     const options = {
         method: 'POST',
         headers: { 'Content-type': 'application/json' },
         data: {
-            model,
-            serialNumber,
-            maxTemp,
-            minTemp,
-            description,
-            status: 'Неизвестно'
+            name,
+            sms: message,
+            email,
+            telephone: phoneNumber,
+            date
         },
-        url: 'http://localhost:8080/api/controllDevice/CreateDevice'
+        url: 'http://localhost:8080/api/message/setMessage'
     }
     await axios(options).then((res) => {
         return res.data
     })
 }
-export { getListAPI, setNewTemperature, createDeviceAPI }
+export { getListAPI, sendRequestCallAPI, sendMessageAPI }

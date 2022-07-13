@@ -31,10 +31,12 @@ const SpecialistsPage = ({ availabilitySlider }) => {
             ])
         }
         setListDoctors(arrlistDoctors)
+        document.getElementById('direction').scrollIntoView({
+            behavior: 'smooth'
+        })
     }
     const viewListDoctors = (listDoctors) => {
         return listDoctors.map((item, index) => {
-            console.log(item[5])
             return (
                 <Specialist
                     key={index}
@@ -96,7 +98,9 @@ const SpecialistsPage = ({ availabilitySlider }) => {
                 </div>
             </div>
             <div className={styles.listSpecialists}>
-                <div className={styles.headerText}>{direction}</div>
+                <div className={styles.headerText} id='direction'>
+                    {direction}
+                </div>
                 {listDoctors && viewListDoctors(listDoctors)}
             </div>
             <Modal isActive={isModalActive} setActive={setIsModalActive} isClosable={false}>

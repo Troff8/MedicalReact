@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import { sendMessageAPI } from '../../core/api/apiDcp'
 import Button from '../Button'
 import styles from './styles.css'
 const RequestSms = ({ setIsModalActive }) => {
@@ -33,13 +34,7 @@ const RequestSms = ({ setIsModalActive }) => {
         }
         if (countStage === 4) {
             const date = new Date().toLocaleDateString('ru-RU') + ' ' + new Date().toLocaleTimeString()
-            const objRequestSms = {
-                name,
-                phoneNumber,
-                email,
-                message,
-                date
-            }
+            sendMessageAPI(name, phoneNumber, email, message, date)
             setIsModalActive(false)
         } else {
             setIsModalActive(false)

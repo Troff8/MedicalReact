@@ -20,7 +20,7 @@ const Specialist = ({ name, surname, patronymic, direction, experience, city, nu
             </div>
             <div className={styles.allInfo}>
                 <img className={styles.imageInfoContacts} src={callImage} />
-                {number}
+                <a href={`tel:${number}`}>{number}</a>
             </div>
         </div>
     )
