@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { sendRequestCallAPI } from '../../core/api/apiDcp'
 import Button from '../Button'
 import styles from './styles.css'
-const RequestCall = ({ setIsModalActive }) => {
+const RequestCall = ({ setIsModalActive, setIsModalValidationFalseActive }) => {
     const [name, setName] = useState('')
     const [phoneNumber, setPhoneNumber] = useState('')
     const validationValues = () => {
@@ -27,6 +27,7 @@ const RequestCall = ({ setIsModalActive }) => {
         }
         if (countStage !== 2) {
             setIsModalActive(false)
+            setIsModalValidationFalseActive(true)
         }
     }
     const validatePhone = (phone) => {
@@ -67,6 +68,7 @@ const RequestCall = ({ setIsModalActive }) => {
     )
 }
 RequestCall.propTypes = {
-    setIsModalActive: PropTypes.func
+    setIsModalActive: PropTypes.func,
+    setIsModalValidationFalseActive: PropTypes.func
 }
 export default RequestCall

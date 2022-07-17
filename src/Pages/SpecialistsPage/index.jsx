@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { getListAPI } from '../../core/api/apiDcp'
 import Slider from '../../Components/Slider'
 import Modal from '../../Components/Modal'
+import Button from '../../Components/Button'
 import Specialist from '../../Components/Specialist'
 import RequestCall from '../../Components/RequestCall'
 import TypeDoctor from '../../Components/TypeDoctor'
@@ -16,6 +17,7 @@ const SpecialistsPage = ({ availabilitySlider }) => {
     const [isModalActive, setIsModalActive] = useState(false)
     const [direction, setDirection] = useState('')
     const [listDoctors, setListDoctors] = useState()
+    const [isModalValidationFalseActive, setIsModalValidationFalseActive] = useState(false)
     const getListDoctors = async (title) => {
         setDirection(title)
         const arrDoctors = await getListAPI(title)
@@ -104,7 +106,21 @@ const SpecialistsPage = ({ availabilitySlider }) => {
                 {listDoctors && viewListDoctors(listDoctors)}
             </div>
             <Modal isActive={isModalActive} setActive={setIsModalActive} isClosable={false}>
-                <RequestCall setIsModalActive={setIsModalActive} />
+                <RequestCall
+                    setIsModalActive={setIsModalActive}
+                    setIsModalValidationFalseActive={setIsModalValidationFalseActive}
+                />
+            </Modal>
+            <Modal isActive={isModalValidationFalseActive} setActive={setIsModalValidationFalseActive} isClosable={false}>
+                <div className={styles.requestContainer}>
+                    <div className={styles.orderItem}>
+                        <div className={styles.blockHeaderText}>Ошибка</div>
+                    </div>
+                    <div className={styles.blockText}>Некорректный ввод данных</div>
+                    <div className={styles.requestButtonsContainer}>
+                        <Button textButton='Закрыть' handler={() => setIsModalValidationFalseActive(false)} />
+                    </div>
+                </div>
             </Modal>
         </div>
     )

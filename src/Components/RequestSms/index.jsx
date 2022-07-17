@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { sendMessageAPI } from '../../core/api/apiDcp'
 import Button from '../Button'
 import styles from './styles.css'
-const RequestSms = ({ setIsModalActive }) => {
+const RequestSms = ({ setIsModalActive, setIsModalValidationFalseActive }) => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [phoneNumber, setPhoneNumber] = useState('')
@@ -38,6 +38,7 @@ const RequestSms = ({ setIsModalActive }) => {
             setIsModalActive(false)
         } else {
             setIsModalActive(false)
+            setIsModalValidationFalseActive(true)
         }
     }
     const validateEmail = (email) => {
@@ -99,6 +100,7 @@ const RequestSms = ({ setIsModalActive }) => {
     )
 }
 RequestSms.propTypes = {
-    setIsModalActive: PropTypes.func
+    setIsModalActive: PropTypes.func,
+    setIsModalValidationFalseActive: PropTypes.func
 }
 export default RequestSms

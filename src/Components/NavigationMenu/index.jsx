@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 import styles from './styles.css'
 
 const NavigationMenu = ({ menuItems, isMobile }) => {
-    const [renderMobileMenuList, setRenderMobileMenuList] = useState(false)
-    const [statusMenu, setStatusMenu] = useState(false)
+    const [renderMobileMenuList, setRenderMobileMenuList] = useState(true)
+    const [statusMenu, setStatusMenu] = useState(true)
     const mapMenu = () => {
         return (
             menuItems &&

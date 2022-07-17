@@ -12,6 +12,7 @@ import styles from './styles.css'
 
 const ContactsPage = () => {
     const [isModalRequestSmsActive, setIsModalRequestSmsActive] = useState(false)
+    const [isModalValidationFalseActive, setIsModalValidationFalseActive] = useState(false)
     return (
         <div className={styles.mainPage}>
             <Slider menuItems={[slider1Image, slider2Image, slider3Image, slider4Image]} />
@@ -47,7 +48,21 @@ const ContactsPage = () => {
                 </div>
             </div>
             <Modal isActive={isModalRequestSmsActive} setActive={setIsModalRequestSmsActive} isClosable={false}>
-                <RequestSms setIsModalActive={setIsModalRequestSmsActive} />
+                <RequestSms
+                    setIsModalActive={setIsModalRequestSmsActive}
+                    setIsModalValidationFalseActive={setIsModalValidationFalseActive}
+                />
+            </Modal>
+            <Modal isActive={isModalValidationFalseActive} setActive={setIsModalValidationFalseActive} isClosable={false}>
+                <div className={styles.requestContainer}>
+                    <div className={styles.orderItem}>
+                        <div className={styles.blockHeaderText}>Ошибка</div>
+                    </div>
+                    <div className={styles.blockText}>Некорректный ввод данных</div>
+                    <div className={styles.requestButtonsContainer}>
+                        <Button textButton='Закрыть' handler={() => setIsModalValidationFalseActive(false)} />
+                    </div>
+                </div>
             </Modal>
         </div>
     )

@@ -32,6 +32,41 @@
     align-items: center;
     margin-bottom: 30px;
 }
+.request-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 325px;
+    background-color: rgb(211 228 245);
+    box-shadow: 0px 0px 8px rgb(40, 129, 206);
+    padding: 10px;
+    color: #1b1b1b;
+}
+.request-buttons-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    margin-top: auto;
+}
+
+.order-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 10%;
+}
+.order-item {
+    border-radius: 15px;
+    margin-bottom: 7px;
+}
+.field-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 15px;
+}
 @media (max-width: 500px) {
     .menu-specialists {
         grid-template-columns: repeat(2, 1fr);

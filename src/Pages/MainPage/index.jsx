@@ -30,7 +30,7 @@ const MainPage = () => {
                         На базе клиники проводятся консультации, ведение пациентов, а также их лечение с помощью новейших техник и
                         методик, в том числе - без лекарств.
                     </div>
-                    <div className={styles.headerText}>Мы находимся:</div>{' '}
+                    <div className={styles.headerText}>Мы находимся:</div>
                 </div>
 
                 <div className={styles.cardsHospital}>

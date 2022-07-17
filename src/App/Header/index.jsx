@@ -12,6 +12,7 @@ import callImage from '../../images/call.png'
 const Header = ({ isMobile }) => {
     const [isModalRequestCallActive, setIsModalRequestCallActive] = useState(false)
     const [isModalRequestSmsActive, setIsModalRequestSmsActive] = useState(false)
+    const [isModalValidationFalseActive, setIsModalValidationFalseActive] = useState(false)
     return (
         <>
             <div className={styles.header}>
@@ -53,10 +54,27 @@ const Header = ({ isMobile }) => {
                     </div>
                 </div>
                 <Modal isActive={isModalRequestCallActive} setActive={setIsModalRequestCallActive} isClosable={false}>
-                    <RequestCall setIsModalActive={setIsModalRequestCallActive} />
+                    <RequestCall
+                        setIsModalActive={setIsModalRequestCallActive}
+                        setIsModalValidationFalseActive={setIsModalValidationFalseActive}
+                    />
                 </Modal>
                 <Modal isActive={isModalRequestSmsActive} setActive={setIsModalRequestSmsActive} isClosable={false}>
-                    <RequestSms setIsModalActive={setIsModalRequestSmsActive} />
+                    <RequestSms
+                        setIsModalActive={setIsModalRequestSmsActive}
+                        setIsModalValidationFalseActive={setIsModalValidationFalseActive}
+                    />
+                </Modal>
+                <Modal isActive={isModalValidationFalseActive} setActive={setIsModalValidationFalseActive} isClosable={false}>
+                    <div className={styles.requestContainer}>
+                        <div className={styles.orderItem}>
+                            <div className={styles.blockHeaderText}>Ошибка</div>
+                        </div>
+                        <div className={styles.blockText}>Некорректный ввод данных</div>
+                        <div className={styles.requestButtonsContainer}>
+                            <Button textButton='Закрыть' handler={() => setIsModalValidationFalseActive(false)} />
+                        </div>
+                    </div>
                 </Modal>
             </div>
             <NavigationMenu
