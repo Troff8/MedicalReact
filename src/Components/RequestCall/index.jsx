@@ -20,6 +20,7 @@ const RequestCall = ({ setIsModalActive, setIsModalValidationFalseActive }) => {
         } else {
             errorValues.push('Ошибка ввода телефона')
         }
+        console.log(countStage)
         if (countStage === 2) {
             const date = new Date().toLocaleDateString('ru-RU') + ' ' + new Date().toLocaleTimeString()
             sendRequestCallAPI(name, phoneNumber, date)

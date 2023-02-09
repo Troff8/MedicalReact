@@ -21,6 +21,7 @@ const SpecialistsPage = ({ availabilitySlider }) => {
     const getListDoctors = async (title) => {
         setDirection(title)
         const arrDoctors = await getListAPI(title)
+        console.log(title)
         const arrlistDoctors = []
         for (let i = 0; i < arrDoctors.length; i++) {
             arrlistDoctors.push([
