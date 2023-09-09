@@ -1,0 +1,40 @@
+.headerPage{
+    background-color: rgba(17, 224, 121, 0.211);
+    padding: 50px 55px;
+    display: flex;
+    justify-content: space-between;
+}
+.headerPageSection{
+    display: flex;
+    align-items: center;
+}
+.headerPageSection ol{
+    display: inline-block;
+}
+.headerPageSection li{
+    display: inline-block;
+}
+.headerPage p{
+    font-size: 26px;
+    font-weight: 500;
+    color: #444;
+    vertical-align: baseline;
+    margin-right: 20px;
+}
+.headerPage a{
+    text-decoration: none;
+    font-size: 15px;
+    color: #474747;
+    margin-bottom: 0;
+    line-height: 1;
+    position: relative;
+    padding-bottom: 15px;
+    transition: all .3s;
+}
+.headerPage a:hover {
+    text-decoration:underline;
+    color: #63b64b;
+}
+.sectionButton{
+    display: flex;
+}
