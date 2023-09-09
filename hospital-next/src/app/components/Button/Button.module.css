@@ -1,0 +1,26 @@
+.buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height:40px;
+    box-shadow: 0px 0px 5px rgba(7, 222, 122, 0.321) 99%;
+    background-color: rgba(17, 224, 121, 0.211);
+    cursor: pointer;
+    color: #444;
+    padding-inline:3px;
+    margin:3px;
+    transition-duration: 0.3s;
+    user-select: none;
+    border-radius: 5%;
+    border: 1px solid rgba(255, 255, 255, 0.508);
+}
+.buttonContainer:hover {
+    box-shadow: 0px 0px 20px #0d942894;
+    background-color: rgba(11, 234, 130, 0.816) 99%;
+}
+.buttonText{
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.3;
+}
