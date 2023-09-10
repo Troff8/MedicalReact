@@ -8,8 +8,8 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({ title, icon }) => {
     return (
         <div className={styles.buttonContainer}>
-            {icon ? icon : <></>}
             <div className={styles.buttonText}>{title}</div>
+            {icon ? icon : <></>}
         </div>
     );
 };

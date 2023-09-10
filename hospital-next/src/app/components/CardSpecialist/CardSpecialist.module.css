@@ -1,0 +1,24 @@
+.cardSpecialist{
+    width: 217px;
+}
+.cardSpecialistImage{
+    border-radius: 50%; 
+    overflow: hidden;
+     width: 160px; 
+     height: 160px; 
+}
+.cardSpecialist p{
+    margin-bottom: 5px;
+    margin-top: 3px;
+}
+
+.title{
+    font-size: 16px;
+}
+.direction{
+    color: #4d4d51;
+    font-size: 14px;
+    margin-bottom: 0;
+    opacity: .8;
+    line-height: 1.3;
+}

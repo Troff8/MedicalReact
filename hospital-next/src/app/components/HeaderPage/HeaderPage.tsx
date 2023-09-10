@@ -5,24 +5,24 @@ import Link from 'next/link';
 import Button from '../Button/Button';
 
 interface HeaderPageProps {
-    items?: any[];
+    text: string;
 }
-const HeaderPage: React.FC<HeaderPageProps> = ({ items }) => {
+const HeaderPage: React.FC<HeaderPageProps> = ({ text }) => {
     return (
         <div className={styles.headerPage}>
             <div className={styles.headerPageSection}>
-                <p>Главная</p>
-                <ul>
-                    <li>
-                        <Link href={'/'}>Главная |</Link>
-                    </li>
-                    <li>
-                        <Link href={'/'}>123</Link>
-                    </li>
-                </ul>
+                <p>{text}</p>
+                {text !== 'Главная' && (
+                    <ul>
+                        <li>
+                            <Link href={'/'}>Главная |</Link>
+                        </li>
+                        <li>{text}</li>
+                    </ul>
+                )}
             </div>
             <div className={styles.sectionButton}>
-                <Button title="Написать отзыв" />
+                <Button title="Написать отзыв"  icon={<Image src="/favourite.png" width={20} height={20} alt="Review" />}/>
                 <Button title="Оставить заявку" />
             </div>
         </div>

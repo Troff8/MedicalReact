@@ -1,5 +1,5 @@
 .main{
-  height: 100vh;
+  height: 100%;
   box-sizing: border-box;
   overflow: auto;
 }
@@ -10,7 +10,7 @@
   align-items: center;
 }
 .aboutHospital{
-  padding: 50px 0 70px;
+  padding: 50px 0 20px;
   width: 80%;
 }
 .aboutHospital h2 {
@@ -36,4 +36,28 @@
   font-size: 1em;
   line-height: 1.6;
   color: #686868;
+}
+.direction{
+  width: fit-content;
+}
+.cards{
+  display: flex;
+}
+.aboutHospitalMediaInfo{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.container h2{
+  font-size: 26px;
+  font-weight: 500;
+  color: #444;
+  vertical-align: baseline;
+  margin-right: 20px;
+}
+.containerSpecialists{
+  padding: 20px 55px;
+} 
+.containerButton{
+  width: fit-content;
 }

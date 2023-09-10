@@ -31,13 +31,13 @@ export default function Footer() {
                             <p>Наши услуги</p>
                             <ul>
                                 <li>
-                                    <Link href={'/#'}>Доктора</Link>
+                                    <Link href={'/specialistsPage'}>Доктора</Link>
                                 </li>
                                 <li>
-                                    <Link href={'/#'}>Услуги</Link>
+                                    <Link href={'/servicesPage'}>Услуги</Link>
                                 </li>
                                 <li>
-                                    <Link href={'/#'}>Медицинские обследования</Link>
+                                    <Link href={'/'}>Медицинские обследования</Link>
                                 </li>
                             </ul>
                         </li>
@@ -45,13 +45,13 @@ export default function Footer() {
                             <p>О нас</p>
                             <ul>
                                 <li>
-                                    <Link href={'/#'}>КДП</Link>
+                                    <Link href={'/contactsPage'}>КДП</Link>
                                 </li>
                                 <li>
-                                    <Link href={'/#'}>Политика конфиденциальности </Link>
+                                    <Link href={'/privacyPolicyPage'}>Политика конфиденциальности </Link>
                                 </li>
                                 <li>
-                                    <Link href={'/#'}>Контакты</Link>
+                                    <Link href={'/contactsPage'}>Контакты</Link>
                                 </li>
                             </ul>
                         </li>
@@ -59,10 +59,10 @@ export default function Footer() {
                             <p>Для пациентов</p>
                             <ul>
                                 <li>
-                                    <Link href={'/#'}>Часто задаваемые вопросы</Link>
+                                    <Link href={'/questionsPage'}>Часто задаваемые вопросы</Link>
                                 </li>
                                 <li>
-                                    <Link href={'/#'}>COVID-19</Link>
+                                    <Link href={'/covidPage'}>COVID-19</Link>
                                 </li>
                             </ul>
                         </li>
@@ -72,7 +72,7 @@ export default function Footer() {
             <div className={styles.footerBottom}>
                 <div className={styles.footerBottomContent}>
                     <p>Консультативно-диагностическая поликлиника</p>
-                    <Link href={'/#'}>Политика конфиденциальности </Link>
+                    <Link href={'/privacyPolicyPage'}>Политика конфиденциальности </Link>
                 </div>
             </div>
         </footer>
