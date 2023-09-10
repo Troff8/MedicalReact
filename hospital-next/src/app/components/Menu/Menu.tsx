@@ -1,12 +1,15 @@
+'use client';
 import React from 'react';
 import styles from './Menu.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname, useSearchParams } from 'next/navigation';
 
 interface MenuProps {
     items?: any[];
 }
 const Menu: React.FC<MenuProps> = ({ items }) => {
+    const pathName = usePathname();
     return (
         <div className={styles.container}>
             <div className={styles.wrapperTitle}>
@@ -28,9 +31,9 @@ const Menu: React.FC<MenuProps> = ({ items }) => {
                 <ul>
                     {items &&
                         items.map((item) => (
-                            <li key={item}>
-                                <Link href={`/${item.url}`}>{item.title}</Link>
-                            </li>
+                            <Link key={item.title} href={`/${item.url}`}>
+                                <li className={pathName === `/${item.url}` ? styles.active : styles.werw}>{item.title}</li>
+                            </Link>
                         ))}
                 </ul>
             </div>

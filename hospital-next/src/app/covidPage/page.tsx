@@ -8,8 +8,8 @@ export default function Page() {
             <Menu
                 items={url}
             />
-            <HeaderPage text={'Специалисты'}/>
-            <p>specialists</p>
+            <HeaderPage text={'Профосмотры'} />
+            <p>covid</p>
         </>
     );
 }

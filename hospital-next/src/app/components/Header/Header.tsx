@@ -1,13 +1,17 @@
 import styles from './Header.module.css';
 import Image from 'next/image';
 import Button from '../Button/Button';
+import Link from 'next/link';
 
 export default function Header() {
     return (
         <header>
             <div className={styles.container}>
                 <nav className={styles.navTop}>
-                    <Image src="/favicon.ico" width={80} height={80} alt="Logo" />
+                    <Link href={'/'}>
+                        <Image src="/favicon.ico" width={80} height={80} alt="Logo" />
+                    </Link>
+
                     <div className={styles.navTopLeftSide}>
                         <ul className={styles.phoneCall}>
                             <li>
