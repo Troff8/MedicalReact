@@ -1,10 +1,10 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import MainPage from '../../Pages/MainPage'
-import SpecialistsPage from '../../Pages/SpecialistsPage'
-import ServicesPage from '../../Pages/ServicesPage'
-import PreviewsPage from '../../Pages/PreviewsPage'
-import ContactsPage from '../../Pages/ContactsPage'
+import MainPage from '../../Pages/Main'
+import SpecialistsPage from '../../Pages/Specialists'
+import ServicesPage from '../../Pages/Services'
+import PreviewsPage from '../../Pages/Previews'
+import ContactsPage from '../../Pages/Contacts'
 import styles from './styles.css'
 
 const Main = () => {

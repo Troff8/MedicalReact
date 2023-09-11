@@ -29,11 +29,14 @@ export default function Header() {
                         </ul>
                     </div>
                     <div className={styles.navTopRightSide}>
-                        <Button
-                            title="Регистрация"
-                            icon={<Image src="/lock.png" width={20} height={15} alt="Phone" />}
-                        />
-                        <Button title="Вход" icon={<Image src="/lock.png" width={20} height={15} alt="Phone" />} />
+                        <Link href={'/auth'}>
+                            <Button
+                                title="Регистрация"
+                            />
+                        </Link>
+                        <Link href={'/auth'}>
+                            <Button title="Вход"  />
+                        </Link>
                         <Button
                             title="Работникам"
                             icon={<Image src="/lock.png" width={20} height={15} alt="Phone" />}
