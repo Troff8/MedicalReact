@@ -1,6 +1,5 @@
 import styles from './Footer.module.css';
 import Image from 'next/image';
-import Button from '../Button/Button';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -31,10 +30,10 @@ export default function Footer() {
                             <p>Наши услуги</p>
                             <ul>
                                 <li>
-                                    <Link href={'/specialistsPage'}>Доктора</Link>
+                                    <Link href={'/specialists'}>Доктора</Link>
                                 </li>
                                 <li>
-                                    <Link href={'/servicesPage'}>Услуги</Link>
+                                    <Link href={'/services'}>Услуги</Link>
                                 </li>
                                 <li>
                                     <Link href={'/'}>Медицинские обследования</Link>
@@ -45,13 +44,13 @@ export default function Footer() {
                             <p>О нас</p>
                             <ul>
                                 <li>
-                                    <Link href={'/contactsPage'}>КДП</Link>
+                                    <Link href={'/contacts'}>КДП</Link>
                                 </li>
                                 <li>
-                                    <Link href={'/privacyPolicyPage'}>Политика конфиденциальности </Link>
+                                    <Link href={'/privacyPolicy'}>Политика конфиденциальности </Link>
                                 </li>
                                 <li>
-                                    <Link href={'/contactsPage'}>Контакты</Link>
+                                    <Link href={'/contacts'}>Контакты</Link>
                                 </li>
                             </ul>
                         </li>
@@ -59,10 +58,10 @@ export default function Footer() {
                             <p>Для пациентов</p>
                             <ul>
                                 <li>
-                                    <Link href={'/questionsPage'}>Часто задаваемые вопросы</Link>
+                                    <Link href={'/questions'}>Часто задаваемые вопросы</Link>
                                 </li>
                                 <li>
-                                    <Link href={'/covidPage'}>COVID-19</Link>
+                                    <Link href={'/covid'}>COVID-19</Link>
                                 </li>
                             </ul>
                         </li>
@@ -72,7 +71,7 @@ export default function Footer() {
             <div className={styles.footerBottom}>
                 <div className={styles.footerBottomContent}>
                     <p>Консультативно-диагностическая поликлиника</p>
-                    <Link href={'/privacyPolicyPage'}>Политика конфиденциальности </Link>
+                    <Link href={'/privacyPolicy'}>Политика конфиденциальности </Link>
                 </div>
             </div>
         </footer>

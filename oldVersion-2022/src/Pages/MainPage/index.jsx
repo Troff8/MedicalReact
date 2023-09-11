@@ -1,5 +1,5 @@
 import React from 'react'
-import SpecialistsPage from '../SpecialistsPage'
+import SpecialistsPage from '../Specialists'
 import Slider from '../../Components/Slider'
 import CardHospital from '../../Components/CardHospital'
 import slider1Image from '../../images/slider1.png'

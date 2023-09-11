@@ -1,5 +1,10 @@
 .cardSpecialist{
     width: 217px;
+    cursor: pointer;
+}
+.cardSpecialist:hover{
+    transform: translateY(-10px);
+    transition: transform .3s;
 }
 .cardSpecialistImage{
     border-radius: 50%; 

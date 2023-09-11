@@ -46,7 +46,7 @@ const CardHospital: React.FC<CardHospitalProps> = ({ title,description,number,ad
                     </li>
                 </ul>
                 <div className={styles.action}>
-                    <Button title="Записаться онлайн" />
+                    <Button title="Записаться онлайн"/>
                 </div>
             </div>
         </div>

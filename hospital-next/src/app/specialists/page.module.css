@@ -1,0 +1,39 @@
+
+.container{
+    padding: 20px 55px;
+}
+.filter{
+    display: flex;
+    justify-content: space-between;
+}
+.container .fitler{
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.col1{
+    display: flex;
+    align-items: center;
+}
+.col1 h2{
+    color: #3b3b3b;
+    font-size: 32px;
+    text-align: center;
+}
+.counter{
+    padding: 7px 10px 6px;
+    margin-left: 20px;
+    background: #4ABEBB;  
+    border-radius: 20%;
+}
+.col2{
+    display: inline-flex;
+}
+.containerSpecialists{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items:center;
+}

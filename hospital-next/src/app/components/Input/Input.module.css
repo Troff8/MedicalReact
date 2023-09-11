@@ -1,0 +1,19 @@
+.inputWrapper{
+    margin-top: 2px;
+    width: 100%;
+}
+.input{
+    padding: 10px;
+    font-size: 15px;
+    outline-color: rgba(17, 224, 121, 0.211);
+    border-radius: 10px;
+    width: 100%;
+
+}
+.inputError{
+    outline-color: red;
+}
+.inputDisabled{
+    cursor: default;
+    opacity: 50;
+}

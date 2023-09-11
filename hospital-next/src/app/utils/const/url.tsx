@@ -5,18 +5,18 @@ export const url = [
     },
     {
         title: 'Специалисты',
-        url: 'specialistsPage',
+        url: 'specialists',
     },
     {
         title: 'Услуги',
-        url: 'servicesPage',
+        url: 'services',
     },
     {
         title: 'Профосмотры',
-        url: 'inspectionPage',
+        url: 'inspection',
     },
     {
         title: 'Контакты',
-        url: 'contactsPage',
+        url: 'contacts',
     },
 ];

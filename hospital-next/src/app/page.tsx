@@ -3,9 +3,10 @@ import Menu from './components/Menu/Menu';
 import HeaderPage from './components/HeaderPage/HeaderPage';
 import { url } from './utils/const/url';
 import CardHospital from './components/CardHospital/CardHospital';
-import Carousel from './components/Carousel/Carousel';
-import CardSpecialist from './components/CardSpecialist/CardSpecialist';
+import CarouselCustom from './components/Carousel/Carousel';
 import Button from './components/Button/Button';
+import Subscription from './components/Subscription/Subscription';
+import Link from 'next/link';
 
 export default function Home() {
     return (
@@ -72,20 +73,21 @@ export default function Home() {
             <section className={styles.containerSpecialists}>
                 <div className={styles.container}>
                     <h2>Наши специалисты</h2>
-                    <Carousel>
-                        <CardSpecialist title="Профессор, доктор мед. наук Марк Блохинг" direction="Отоларингология" />
-                        <CardSpecialist title="Профессор, доктор мед. наук Марк Блохинг" direction="Отоларингология" />
-                        <CardSpecialist title="Профессор, доктор мед. наук Марк Блохинг" direction="Отоларингология" />
-                        <CardSpecialist title="Профессор, доктор мед. наук Марк Блохинг" direction="Отоларингология" />
-                        <CardSpecialist title="Профессор, доктор мед. наук Марк Блохинг" direction="Отоларингология" />
-                        <CardSpecialist title="Профессор, доктор мед. наук Марк Блохинг" direction="Отоларингология" />
-                        <CardSpecialist title="Профессор, доктор мед. наук Марк Блохинг" direction="Отоларингология" />
-                    </Carousel>
+                    <CarouselCustom />
                 </div>
                 <div className={styles.containerButton}>
-                    <Button title="Все специалисты" />
+                    <Link href={'specialists'}>
+                        <Button title="Все специалисты" />
+                    </Link>
                 </div>
             </section>
+            <div className={styles.subscriptionContainer}>
+                <div>
+                    <h2>Подпишитесь на новости</h2>
+                    <span>Мы сообщим о начале акциях и новых скидках</span>
+                </div>
+                <Subscription />
+            </div>
         </main>
     );
 }
