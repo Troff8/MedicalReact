@@ -1,0 +1,23 @@
+
+.input{
+    width: 1.6em;
+    height: 1.6em;
+    border-radius: 0.15em;
+    margin-right: 0.5em;
+    border: 0.15em solid #007a7e;
+    background-color: rgba(17, 224, 121, 0.211);;
+    outline: none;
+    cursor: pointer;
+}
+.inputError{
+    outline-color: red;
+}
+.inputDisabled{
+    cursor: default;
+    opacity: 50;
+}
+.textCheckBox {
+    font-size: 15px;
+    color: #686868;
+    line-height: 1.5;
+}

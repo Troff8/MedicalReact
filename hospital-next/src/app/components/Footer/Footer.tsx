@@ -61,7 +61,7 @@ export default function Footer() {
                                     <Link href={'/questions'}>Часто задаваемые вопросы</Link>
                                 </li>
                                 <li>
-                                    <Link href={'/covid'}>COVID-19</Link>
+                                    <Link href={'/questions'}>COVID-19</Link>
                                 </li>
                             </ul>
                         </li>

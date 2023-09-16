@@ -4,6 +4,7 @@ import HeaderPage from '../components/HeaderPage/HeaderPage';
 import { url } from '../utils/const/url';
 import styles from './page.module.css';
 import Feedback from '../components/Feedback/Feedback';
+import Subscription from '../components/Subscription/Subscription';
 
 export default function Page() {
     return (
@@ -45,6 +46,13 @@ export default function Page() {
                     </div>
                 </div>
             </section>
+            <div className={styles.subscriptionContainer}>
+                <div>
+                    <h2>Подпишитесь на новости</h2>
+                    <span>Мы сообщим о начале акциях и новых скидках</span>
+                </div>
+                <Subscription />
+            </div>
         </main>
     );
 }
