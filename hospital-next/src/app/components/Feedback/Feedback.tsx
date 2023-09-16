@@ -5,6 +5,7 @@ import styles from './Feedback.module.css';
 import Input from '../Input/Input';
 import Button from '../Button/Button';
 import Textarea from '../Textarea/Textarea';
+import CheckBox from '../CheckBox/CheckBox';
 import Link from 'next/link';
 
 const Feedback: React.FC = () => {
@@ -35,13 +36,16 @@ const Feedback: React.FC = () => {
             <Input label="Email" register={register} id={'email'} errors={errors} type="email" />
             <Input label="Телефон" register={register} id={'phone'} errors={errors} />
             <Textarea label="Ваше сообщение" register={register} id={'message'} errors={errors} />
-            <div>
-                <Input register={register} id={'phone'} errors={errors} type="checkBox" />
-                <p>
-                    Отправляя запрос, вы соглашаетесь с нашей{' '}
-                    <Link href={'/privacyPolicy'}>политикой конфиденциальности</Link>
-                </p>
-            </div>
+            <CheckBox
+                label={'Я согласен с использованием необходимых технологий Cookie для обработки моего запроса.'}
+                register={register}
+                id={'phone'}
+                errors={errors}
+            />
+            <p>
+                Отправляя запрос, вы соглашаетесь с нашей{' '}
+                <Link href={'/privacyPolicy'}>политикой конфиденциальности</Link>
+            </p>
             <Button title="Отправить" disabled={loading} type="submit"></Button>
         </form>
     );
