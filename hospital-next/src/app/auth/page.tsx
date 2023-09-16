@@ -8,9 +8,9 @@ export default function Page() {
     return (
         <main>
             <Menu items={url} />
-            <HeaderPage text={'Вход в аккаунт'} />
+            <HeaderPage text={'Авторизация'} />
             <section className={styles.container}>
-                <h2>Зайдите в свой аккаунт</h2>
+                <h2>Авторизация КДП</h2>
                 <AuthForm />
             </section>
         </main>

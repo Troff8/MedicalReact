@@ -1,11 +1,10 @@
 'use client';
 import { useCallback, useState } from 'react';
+import Image from 'next/image';
 import { FieldValues, useForm, SubmitHandler } from 'react-hook-form';
 import styles from './AuthForm.module.css';
 import Input from '../Input/Input';
 import Button from '../Button/Button';
-import AuthSocialButtons from '../AuthSocialButton/AuthSocialButton';
-import { BsGoogle, BsSteam } from 'react-icons/bs';
 
 type Variant = 'REGISTER' | 'LOGIN';
 
@@ -59,8 +58,7 @@ const AuthForm = () => {
                 </form>
             </div>
             <div className={styles.socialButton}>
-                <AuthSocialButtons icon={BsGoogle} onClick={() => socialAction('github')} />
-                <AuthSocialButtons icon={BsSteam} onClick={() => socialAction('steam')} />
+                <Button title={'Войти через '} icon={<Image src="/search.png" width={30} height={30} alt="google" />} />
             </div>
             <div className={styles.bottom}>
                 <div onClick={toggleVariant}>

@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import { FieldErrors, FieldValues, UseFormRegister } from 'react-hook-form';
 
 interface InputProps {
-    label: string;
+    label?: string;
     id: string;
     type?: string;
     required?: boolean;
@@ -17,7 +17,7 @@ interface InputProps {
 
 const Input: React.FC<InputProps> = ({ label, id, type, required, register, errors, disabled }) => {
     return (
-        <div>
+        <div className={styles.container}>
             <label htmlFor={id}>{label}</label>
             <div className={styles.inputWrapper}>
                 <input id={id}

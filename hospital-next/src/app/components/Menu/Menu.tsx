@@ -16,7 +16,7 @@ const Menu: React.FC<MenuProps> = ({ items }) => {
                 <ul>
                     <li>
                         <h1>Консультативно-диагностическая Поликлиника</h1>
-                        <Image src="/hospital.png" width={20} height={20} alt="Picture of the author" />
+                        <Image src="/heartLogo.png" width={20} height={20} alt="heart" />
                     </li>
 
                     <li>
