@@ -1,53 +1,53 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
+// // This is your Prisma schema file,
+// // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
-generator client {
-  provider = "prisma-client-js"
-}
+// generator client {
+//   provider = "prisma-client-js"
+// }
 
-datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
-}
+// datasource db {
+//   provider = "postgresql"
+//   url      = env("DATABASE_URL")
+// }
 
-model Account {
-  id                       String  @id @default(cuid())
-  userId                   String
-  type                     String
-  provider                 String
-  providerAccountId        String
-  refresh_token            String?
-  refresh_token_expires_in Int?
-  access_token             String?
-  expires_at               Int?
-  token_type               String?
-  scope                    String?
-  id_token                 String?
-  session_state            String?
-  oauth_token_secret       String?
-  oauth_token              String?
-  password                 String?
+// model Account {
+//   id                       String  @id @default(cuid())
+//   userId                   String
+//   type                     String
+//   provider                 String
+//   providerAccountId        String
+//   refresh_token            String?
+//   refresh_token_expires_in Int?
+//   access_token             String?
+//   expires_at               Int?
+//   token_type               String?
+//   scope                    String?
+//   id_token                 String?
+//   session_state            String?
+//   oauth_token_secret       String?
+//   oauth_token              String?
+//   password                 String?
 
-  @@unique([provider, providerAccountId])
-}
+//   @@unique([provider, providerAccountId])
+// }
 
-model User {
-  id            String    @id @default(cuid())
-  active        Boolean   @default(true)
-  nickname      String?   @unique
-  name          String?
-  email         String    @unique
-  emailVerified DateTime?
-  image         String?
-  role          String?
-  createdAt     DateTime  @default(dbgenerated("timezone('utc'::text, now())")) @db.Timestamp()
-  updatedAt     DateTime  @default(dbgenerated("timezone('utc'::text, now())")) @updatedAt
-}
+// model User {
+//   id            String    @id @default(cuid())
+//   active        Boolean   @default(true)
+//   nickname      String?   @unique
+//   name          String?
+//   email         String    @unique
+//   emailVerified DateTime?
+//   image         String?
+//   role          String?
+//   createdAt     DateTime  @default(dbgenerated("timezone('utc'::text, now())")) @db.Timestamp()
+//   updatedAt     DateTime  @default(dbgenerated("timezone('utc'::text, now())")) @updatedAt
+// }
 
-model Specialist {
-  id            String    @id @default(cuid())
-  name          String
-  direction     String
-  rank          String
-  image         String?
-}
+// model Specialist {
+//   id            String    @id @default(cuid())
+//   name          String
+//   direction     String
+//   rank          String
+//   image         String?
+// }
