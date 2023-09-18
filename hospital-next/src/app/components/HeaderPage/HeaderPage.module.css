@@ -23,7 +23,7 @@
     vertical-align: baseline;
     margin-right: 20px;
 }
-.headerPage a{
+.headerPageSection a{
     text-decoration: none;
     font-size: 15px;
     color: #474747;
@@ -40,6 +40,9 @@
 .sectionButton{
     display: flex;
 }
+.sectionButton a{
+    width: 100%;
+}
 
 @media (max-width: 500px) {
     .sectionButton{
@@ -50,8 +53,21 @@
         flex-direction: column;
         margin-right: 15px;
     }
+    .headerPage{
+        padding: 50px 12px;
+    }
     .headerPage p{
         margin-right: 0px;
         font-size: 20px;
     }
+    .headerPageSection li{
+        font-size: 13px;
+    }
+    .sectionButton{
+        width: 50%;
+    }
+    .sectionButton a{
+        width: 100%;
+    }
+    
 }

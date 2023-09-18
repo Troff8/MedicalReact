@@ -74,6 +74,9 @@
   .containerAboutHospital{
     padding: 0px;
   }
+  .aboutHospital{
+    padding: 20px 0 20px;
+  }
   .aboutHospital h2 {
     font-size: 20px;
   }

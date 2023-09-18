@@ -1,7 +1,7 @@
 export const url = [
     {
         title: 'Главная',
-        url: '#',
+        url: '/',
     },
     {
         title: 'Специалисты',

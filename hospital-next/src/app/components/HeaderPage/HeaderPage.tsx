@@ -22,7 +22,13 @@ const HeaderPage: React.FC<HeaderPageProps> = ({ text }) => {
                 )}
             </div>
             <div className={styles.sectionButton}>
-                <Button title="Написать отзыв"  icon={<Image src="/favourite.png" width={20} height={20} alt="Review" />}/>
+                <Link href={'/contacts'}>
+                    <Button
+                        title="Написать отзыв"
+                        icon={<Image src="/favourite.png" width={20} height={20} alt="Review" />}
+                    />
+                </Link>
+
                 <Button title="Оставить заявку" />
             </div>
         </div>
