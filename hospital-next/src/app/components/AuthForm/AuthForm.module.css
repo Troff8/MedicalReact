@@ -33,3 +33,9 @@ width: 400px;
     text-decoration: underline;
     cursor: pointer;
 }
+
+@media (max-width: 500px) {
+    .wrapperAuth .auth{
+        width: 300px;
+    }
+}
