@@ -7,7 +7,7 @@ export default function Page() {
     return (
         <main>
             <Menu items={url} />
-            <HeaderPage text={'Политика конфиденциальности'} />
+            <HeaderPage text={'Конфиденциальность'} />
             <section className={styles.container}>
                 <div className={styles.content}>
                     <h2>Политика обработки данных</h2>

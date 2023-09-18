@@ -19,3 +19,12 @@
     line-height: 1.45;
     margin-bottom: 0;
 }
+@media (max-width: 500px) {
+    .recommendationCard{
+        width: 100%;
+        padding: 10px 5px;
+    }
+
+}
+
+  

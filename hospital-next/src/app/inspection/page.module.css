@@ -48,3 +48,27 @@
 .aboutInspection{
     width: 400px;
  }
+ @media (max-width: 500px) {
+    .titlePage {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    .container{
+        padding: 15px 10px;
+    }
+    .inspection{
+        flex-direction: column;
+        padding: 15px 5px;
+    }
+    .details{
+        padding-inline: 5px;
+    }
+    .subscriptionContainer{
+        flex-direction: column;
+      }
+      .subscriptionContainerText{
+        text-align: center;
+        margin-bottom: 15px;
+      }
+
+}

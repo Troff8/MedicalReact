@@ -37,3 +37,17 @@
     grid-template-columns: repeat(5, 1fr);
     justify-items:center;
 }
+@media (max-width: 500px) {
+    .container{
+        padding: 15px 10px;
+    }
+    .filter{
+        flex-direction: column;
+        align-items: center;
+    }
+    .containerSpecialists{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0px
+    }
+
+}

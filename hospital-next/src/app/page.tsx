@@ -82,7 +82,7 @@ export default function Home() {
                 </div>
             </section>
             <div className={styles.subscriptionContainer}>
-                <div>
+                <div className={styles.subscriptionContainerText}>
                     <h2>Подпишитесь на новости</h2>
                     <span>Мы сообщим о начале акциях и новых скидках</span>
                 </div>

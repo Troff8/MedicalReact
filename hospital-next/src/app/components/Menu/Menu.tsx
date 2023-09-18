@@ -15,8 +15,10 @@ const Menu: React.FC<MenuProps> = ({ items }) => {
             <div className={styles.wrapperTitle}>
                 <ul>
                     <li>
-                        <h1>Консультативно-диагностическая Поликлиника</h1>
-                        <Image src="/heartLogo.png" width={20} height={20} alt="heart" />
+                        <Link href={'/'}>
+                            <Image src="/favicon.ico" width={30} height={30} alt="Logo" />
+                        </Link>
+                        <h1 className={styles.title}>Консультативно-диагностическая Поликлиника</h1>
                     </li>
 
                     <li>
@@ -32,7 +34,9 @@ const Menu: React.FC<MenuProps> = ({ items }) => {
                     {items &&
                         items.map((item) => (
                             <Link key={item.title} href={`/${item.url}`}>
-                                <li className={pathName === `/${item.url}` ? styles.active : styles.werw}>{item.title}</li>
+                                <li className={pathName === `/${item.url}` ? styles.active : styles.werw}>
+                                    {item.title}
+                                </li>
                             </Link>
                         ))}
                 </ul>

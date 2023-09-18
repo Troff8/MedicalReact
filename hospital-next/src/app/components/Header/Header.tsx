@@ -8,16 +8,14 @@ export default function Header() {
         <header>
             <div className={styles.container}>
                 <nav className={styles.navTop}>
-                    <Link href={'/'}>
-                        <Image src="/favicon.ico" width={80} height={80} alt="Logo" />
-                    </Link>
-
                     <div className={styles.navTopLeftSide}>
                         <ul className={styles.phoneCall}>
                             <li>
                                 <Image src="/phone.svg" width={10} height={14} alt="Phone" />
                                 <a href="tel:+78463930092">Чапаевск +78463930092</a>
                                 <span>Будни:8:00-19:00</span>
+                            </li>
+                            <li>
                                 <Image src="/phone.svg" width={10} height={14} alt="Phone" />
                                 <a href="tel:+78463930092">Безенчук +78463930092</a>
                                 <span>Будни:8:00-19:00,Суббота 8:00-17:00</span>
@@ -30,12 +28,7 @@ export default function Header() {
                     </div>
                     <div className={styles.navTopRightSide}>
                         <Link href={'/auth'}>
-                            <Button
-                                title="Регистрация"
-                            />
-                        </Link>
-                        <Link href={'/auth'}>
-                            <Button title="Вход"  />
+                            <Button title="Аккаунт" />
                         </Link>
                         <Button
                             title="Работникам"
