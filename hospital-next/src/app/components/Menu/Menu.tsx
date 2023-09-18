@@ -34,7 +34,13 @@ const Menu: React.FC<MenuProps> = ({ items }) => {
                     {items &&
                         items.map((item) => (
                             <Link key={item.title} href={`/${item.url}`}>
-                                <li className={pathName === `/${item.url}` ? styles.active : styles.werw}>
+                                <li
+                                    className={
+                                        pathName === `/${item.url}` || (pathName === '/' && item.url === '/')
+                                            ? styles.active
+                                            : styles.werw
+                                    }
+                                >
                                     {item.title}
                                 </li>
                             </Link>

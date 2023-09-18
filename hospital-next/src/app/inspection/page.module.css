@@ -56,6 +56,9 @@
     .container{
         padding: 15px 10px;
     }
+    .aboutInspection{
+        width: 100%;
+    }
     .inspection{
         flex-direction: column;
         padding: 15px 5px;
