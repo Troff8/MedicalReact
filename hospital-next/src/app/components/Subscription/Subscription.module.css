@@ -74,3 +74,9 @@ transition-delay: .35s;
 visibility: visible;
 opacity: 1;
 }
+
+@media (max-width: 500px) {
+    .content{
+        width: 300px;
+    }
+}

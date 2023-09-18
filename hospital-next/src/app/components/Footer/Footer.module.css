@@ -98,3 +98,25 @@
 .footerBottomContent{
     display: flex;
 }
+@media (max-width: 500px) {
+    .footerContainer{
+        display: block;
+        padding-inline: 5px;
+    }
+    .footerNav{
+        margin-top: 15px;
+    }
+    .columnFooter{
+        max-width: 100%;
+    }
+    .category li{
+        font-size: 0.7em;
+    }
+    .footerBottomContent{
+        flex-direction: column;
+        align-items: center;
+    }
+    .footerBottom{
+        width: 100%;
+    }
+}
