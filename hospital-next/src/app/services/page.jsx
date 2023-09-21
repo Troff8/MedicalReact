@@ -57,7 +57,7 @@ export default function Page() {
                         <CardHospital
                             title="Безенчук"
                             description="Мы находимся в городе Безенчук"
-                            number="+78463930092"
+                            number="+79277505656"
                             address="Безенчук, ул.Советская 56"
                             mail="kd_p09@mail.ru"
                             schedule="Пн-Пт"
