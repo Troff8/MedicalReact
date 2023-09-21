@@ -1,6 +1,7 @@
 import './globals.css'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
+import ToasterContext from './context/ToasterContext'
 import Favicon from '../../public/favicon.ico'
 import type { Metadata } from 'next'
 import { Nunito_Sans } from 'next/font/google'
@@ -21,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body className={inter.className}>
+        <ToasterContext />
         <Header />
         {children}
         <Footer />
