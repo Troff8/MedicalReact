@@ -23,6 +23,7 @@
     "react-hot-toast": "^2.4.1",
     "react-modal": "^3.16.1",
     "react-multi-carousel": "^2.8.4",
+    "react-select": "^5.7.5",
     "typescript": "5.2.2"
   },
   "devDependencies": {

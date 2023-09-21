@@ -21,8 +21,18 @@ const specialists = [
     { title: 'Профессор, доктор мед. наук Марк Блохинг', direction: 'Отоларингология' },
     { title: 'Профессор, доктор мед. наук Марк Блохинг', direction: 'Отоларингология' },
 ];
+const options = [
+    { value: 'Узи', label: 'Узи' },
+    { value: 'Терапевт', label: 'Терапевт' },
+    { value: 'Психолог', label: 'Психолог' },
+    { value: 'Гинеколог', label: 'Гинеколог' },
+];
 
 export default function Page() {
+    // const onChangeSelect = (selectOption: any) => {
+    //     'use server';
+    //     console.log(selectOption);
+    // };
     return (
         <main>
             <Menu items={url} />
@@ -36,14 +46,18 @@ export default function Page() {
                         </div>
                     </div>
                     <div className={styles.col2}>
-                        <Select />
+                        <Select isMulti={true} options={options}/>
                         <Input type="search" />
                     </div>
                 </div>
                 <div className={styles.containerSpecialists}>
-                {specialists.map((specialist) => (
-                    <CardSpecialist title={specialist.title} direction={specialist.direction} key={specialist.title}/>
-                ))}
+                    {specialists.map((specialist) => (
+                        <CardSpecialist
+                            title={specialist.title}
+                            direction={specialist.direction}
+                            key={specialist.title}
+                        />
+                    ))}
                 </div>
             </section>
         </main>
