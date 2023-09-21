@@ -17,7 +17,7 @@ export default function Header() {
                             </li>
                             <li>
                                 <Image src="/phone.svg" width={10} height={14} alt="Phone" />
-                                <a href="tel:+78463930092">Безенчук +78463930092</a>
+                                <a href="tel:+79277505656">Безенчук +79277505656</a>
                                 <span>Будни:8:00-19:00,Суббота 8:00-17:00</span>
                             </li>
                             <li>
