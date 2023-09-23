@@ -1,7 +1,7 @@
 // import axios from 'axios'
 const getListAPI = async (direction) => {
     try {
-        const response = await axios.get('https://server.cdpolyclinic.ru/api/doctor/getFullList')
+        const response = await axios.get(process.env.GET_LIST_API)
         if (response.status === 200) {
             if (response.data.length >= 0) {
                 const listDoctorsDirection = []
@@ -26,7 +26,7 @@ const sendRequestCallAPI = async (name, phoneNumber, date) => {
             telephone: phoneNumber,
             date
         },
-        url: 'https://server.cdpolyclinic.ru/api/request/setRequest'
+        url: process.env.SET_REQUEST_CALL
     }
     await axios(options).then((res) => {
         return res.data
@@ -44,7 +44,7 @@ const sendMessageAPI = async (name, phoneNumber, email, message, date) => {
             telephone: phoneNumber,
             date
         },
-        url: 'https://server.cdpolyclinic.ru/api/message/setMessage'
+        url: process.env.SET_MESSAGE_API
     }
     await axios(options).then((res) => {
         return res.data
