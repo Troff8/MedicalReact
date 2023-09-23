@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { FieldValues, useForm, SubmitHandler } from 'react-hook-form';
 import styles from './Feedback.module.css';
-import Input from '../Input/Input';
+import { Input } from '../Input/Input';
 import Button from '../Button/Button';
 import Textarea from '../Textarea/Textarea';
 import CheckBox from '../CheckBox/CheckBox';

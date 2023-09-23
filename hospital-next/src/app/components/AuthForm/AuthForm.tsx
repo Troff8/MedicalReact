@@ -3,8 +3,9 @@ import { useCallback, useState } from 'react';
 import Image from 'next/image';
 import { FieldValues, useForm, SubmitHandler } from 'react-hook-form';
 import styles from './AuthForm.module.css';
-import Input from '../Input/Input';
+import {Input} from '../Input/Input';
 import Button from '../Button/Button';
+import toast from 'react-hot-toast';
 
 type Variant = 'REGISTER' | 'LOGIN';
 
@@ -31,6 +32,7 @@ const AuthForm = () => {
     });
     const onSubmit: SubmitHandler<FieldValues> = (data) => {
         setLoading(true);
+        toast.error('Авторизация временно недоступна!');
 
         if (variant === 'LOGIN') {
             // login

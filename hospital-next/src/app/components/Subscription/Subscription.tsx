@@ -4,7 +4,7 @@ import { FieldValues, useForm, SubmitHandler } from 'react-hook-form';
 import { useLocalStorage } from '../../hooks/useLocalStorage';
 import clsx from 'clsx';
 import styles from './Subscription.module.css';
-import Input from '../Input/Input';
+import {Input} from '../Input/Input';
 import toast from 'react-hot-toast';
 
 const Subscription: React.FC = () => {
