@@ -64,7 +64,7 @@ const RequestCallModal = () => {
                                 name="number"
                                 control={control}
                                 rules={{
-                                    minLength: 4,
+                                    minLength: 7,
                                     required: true,
                                 }}
                                 render={({ field }) => (
