@@ -1,4 +1,4 @@
-import axios from 'axios'
+// import axios from 'axios'
 const getListAPI = async (direction) => {
     try {
         const response = await axios.get('https://server.cdpolyclinic.ru/api/doctor/getFullList')
