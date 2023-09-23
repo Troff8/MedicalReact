@@ -31,14 +31,23 @@
   margin-bottom: 15px;
   color: #686868;
 }
-.aboutHospital li{
-  list-style:circle;
-  font-size: 1em;
-  line-height: 1.6;
-  color: #686868;
-}
+
 .direction{
   width: fit-content;
+}
+.direction ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.direction li{
+  padding-left: 1em; 
+  text-indent: -.7em;
+  margin: 5px 0px;
+}
+.direction li::before {
+  content: "• ";
+  color: rgba(37, 190, 113, 0.544);
 }
 .cards{
   display: flex;
