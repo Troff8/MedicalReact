@@ -47,7 +47,7 @@ export default function Page() {
                     </div>
                     <div className={styles.col2}>
                         <Select isMulti={true} options={options}/>
-                        <Input type="search" />
+                        <Input type="search" id={'id'} />
                     </div>
                 </div>
                 <div className={styles.containerSpecialists}>
