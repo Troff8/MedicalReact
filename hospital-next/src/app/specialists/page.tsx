@@ -1,7 +1,7 @@
 import Menu from '../components/Menu/Menu';
 import HeaderPage from '../components/HeaderPage/HeaderPage';
 import Select from '../components/Select/Select';
-import Input from '../components/Input/Input';
+import {Input} from '../components/Input/Input';
 import styles from './page.module.css';
 import { url } from '../utils/const/url';
 import CardSpecialist from '../components/CardSpecialist/CardSpecialist';

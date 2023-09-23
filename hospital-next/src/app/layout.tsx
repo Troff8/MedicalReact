@@ -5,6 +5,7 @@ import ToasterContext from './context/ToasterContext'
 import Favicon from '../../public/favicon.ico'
 import type { Metadata } from 'next'
 import { Nunito_Sans } from 'next/font/google'
+import ModalProvider from './providers/ModalProvider'
 
 const inter = Nunito_Sans({ subsets: ['latin'] })
 
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body className={inter.className}>
+        <ModalProvider />
         <ToasterContext />
         <Header />
         {children}

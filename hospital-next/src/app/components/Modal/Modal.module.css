@@ -1,0 +1,29 @@
+.overlay{
+	background-color: rgba(88, 88, 88, 0.335);
+    backdrop-filter: blur(2px);
+    position: fixed;
+    inset: 0px;
+}
+.content{
+    position: fixed;
+    filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+    top:50%;
+    left:50%;
+    border-width: 1px;
+    border-color: rgb(163 163 163); 
+    max-height: 100%;
+    height: auto;
+    width: auto;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    /* padding: 25px; */
+}
+.content:focus{
+    outline: none;
+}
+.title{
+    text-align: center;
+}
+.description{
+    text-align: center;
+}
