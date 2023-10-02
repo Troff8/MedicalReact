@@ -32,11 +32,6 @@
 .col2{
     display: inline-flex;
 }
-.containerSpecialists{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    justify-items:center;
-}
 @media (max-width: 500px) {
     .container{
         padding: 15px 10px;

@@ -22,7 +22,8 @@ const Button: React.FC<ButtonProps> = ({ title, icon, children, onClick, danger,
         ${disabled && styles.buttonContainerDisabled}`)}
             >
                 {title}
-                {icon ? icon : <></>}
+
+                {icon ? <div className={styles.icon}>{icon}</div> : <></>}
                 {children}
             </div>
         </button>

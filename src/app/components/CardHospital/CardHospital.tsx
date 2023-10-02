@@ -17,6 +17,7 @@ const CardHospital: React.FC<CardHospitalProps> = ({ title, description, number,
     const recordHospitalModal = useRecordHospitalModal();
 
     const click = () => {
+        recordHospitalModal.city = title;
         recordHospitalModal.onOpen();
     };
     return (

@@ -4,10 +4,24 @@ import { FieldValues, useForm, SubmitHandler, Controller } from 'react-hook-form
 import styles from './Feedback.module.css';
 import { Input } from '../Input/Input';
 import Button from '../Button/Button';
-import {Textarea} from '../Textarea/Textarea';
+import { Textarea } from '../Textarea/Textarea';
 import CheckBox from '../CheckBox/CheckBox';
 import toast from 'react-hot-toast';
 import Link from 'next/link';
+
+const sendFeedback = async (feedback: any) => {
+    try {
+        const res = await fetch('http://localhost:3000/api/feedback', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(feedback),
+        });
+        const data = await res.json();
+        return data;
+    } catch (err) {
+        return null;
+    }
+};
 
 const Feedback: React.FC = () => {
     const [loading, setLoading] = useState(false);
@@ -22,15 +36,23 @@ const Feedback: React.FC = () => {
             name: '',
             surname: '',
             email: '',
-            phone: '',
+            number: '',
             message: '',
         },
     });
 
-    const onSubmit: SubmitHandler<FieldValues> = (data) => {
-        toast.success('Заявка успешно создана!');
-        console.log(data);
-        reset();
+    const onSubmit: SubmitHandler<FieldValues> = async (values) => {
+        console.log(values);
+        setLoading(true);
+        const res = await sendFeedback(values);
+        console.log(res);
+        if (res) {
+            toast.success('Заявка успешно создана!');
+            // reset();
+        } else {
+            toast.error('Ошибка отправки данных,попробуйте позже');
+        }
+        setLoading(false);
     };
     return (
         <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
@@ -67,14 +89,14 @@ const Feedback: React.FC = () => {
                 )}
             />
             <Controller
-                name="phone"
+                name="number"
                 control={control}
                 rules={{
                     minLength: 4,
                     required: true,
                 }}
                 render={({ field }) => (
-                    <Input label="Телефон" id={'phone'} errors={errors} type="string " {...field} disabled={loading} />
+                    <Input label="Телефон" id={'number'} errors={errors} type="string " {...field} disabled={loading} />
                 )}
             />
             <Controller
