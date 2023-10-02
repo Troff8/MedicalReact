@@ -3,10 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "build": "concurrently -k  \"docker-compose up -d \" \"npx prisma db push\" \"next dev\"",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:reset": "npx prisma db push --force-reset",
+    "dev": "concurrently -k \"npx prisma studio\" \"next dev\"",
+    "dev:db:init": "npx prisma migrate dev && npx prisma db seed",
+    "dev:db:run": "docker-compose up -d",
+    "dev:db:fill": "ts-node -r dotenv/config scripts/fillDevData.ts",
+    "db:migrate": "npx prisma migrate deploy",
+    "db:seed": "npx prisma db seed"
   },
   "dependencies": {
     "@prisma/client": "^5.2.0",
@@ -15,6 +21,7 @@
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
     "clsx": "^2.0.0",
+    "concurrently": "^8.2.1",
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
     "next": "13.4.19",
