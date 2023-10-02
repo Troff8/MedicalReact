@@ -9,6 +9,20 @@ import Button from '../Button/Button';
 import { Input } from '../Input/Input';
 import { useState } from 'react';
 
+const sendRequest = async (request: any) => {
+    try {
+        const res = await fetch('http://localhost:3000/api/requestCall', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(request),
+        });
+        const data = await res.json();
+        return data;
+    } catch (err) {
+        return null;
+    }
+};
+
 const RequestCallModal = () => {
     const [loading, setLoading] = useState(false);
     const requestModal = useRequestCallModal();
@@ -21,15 +35,22 @@ const RequestCallModal = () => {
         control,
         handleSubmit,
         formState: { errors },
+        reset
     } = useForm<FieldValues>({
         defaultValues: {
             name: '',
             number: '',
         },
     });
-    const onSubmit: SubmitHandler<FieldValues> = (values) => {
+    const onSubmit: SubmitHandler<FieldValues> = async (values) => {
         setLoading(true);
-        toast.success('Заявка успешно создана! Скоро вам перезвонит оператор');
+        const res = await sendRequest(values);
+        if (res) {
+            toast.success('Заявка успешно создана! Скоро вам перезвонит оператор');
+        } else {    
+            toast.error('Ошибка отправки данных,попробуйте позже');
+        }
+        reset();
         requestModal.onClose();
     };
     return (

@@ -24,6 +24,7 @@
     line-height: 1.3;
     cursor: pointer;
     width: 100%;
+    padding: 0px 3px;
 }
 .buttonContainerDanger{
     border: 1px solid red;
@@ -36,4 +37,7 @@
     box-shadow:none;
     background-color: none;
     cursor: default;
+}
+.icon{
+    margin-left: 3px;
 }

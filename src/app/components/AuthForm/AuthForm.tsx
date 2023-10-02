@@ -60,7 +60,7 @@ const AuthForm = () => {
                 </form>
             </div>
             <div className={styles.socialButton}>
-                <Button title={'Войти через '} icon={<Image src="/search.png" width={30} height={30} alt="google" />} />
+                <Button title={'Войти через '} icon={<Image src="/search.png" width={20} height={20} alt="google" />} />
             </div>
             <div className={styles.bottom}>
                 <div onClick={toggleVariant}>

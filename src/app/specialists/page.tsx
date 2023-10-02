@@ -1,26 +1,11 @@
 import Menu from '../components/Menu/Menu';
 import HeaderPage from '../components/HeaderPage/HeaderPage';
 import Select from '../components/Select/Select';
-import {Input} from '../components/Input/Input';
+import { Input } from '../components/Input/Input';
 import styles from './page.module.css';
 import { url } from '../utils/const/url';
-import CardSpecialist from '../components/CardSpecialist/CardSpecialist';
-const specialists = [
-    { title: 'Профессор, доктор мед. наук Марк Блохинг', direction: 'Отоларингология' },
-    { title: 'Профессор, доктор мед. наук Марк Блохинг', direction: 'Отоларингология' },
-    { title: 'Профессор, доктор мед. наук Марк Блохинг', direction: 'Отоларингология' },
-    { title: 'Профессор, доктор мед. наук Марк Блохинг', direction: 'Отоларингология' },
-    { title: 'Профессор, доктор мед. наук Марк Блохинг', direction: 'Отоларингология' },
-    { title: 'Профессор, доктор мед. наук Марк Блохинг', direction: 'Отоларингология' },
-    { title: 'Профессор, доктор мед. наук Марк Блохинг', direction: 'Отоларингология' },
-    { title: 'Профессор, доктор мед. наук Марк Блохинг', direction: 'Отоларингология' },
-    { title: 'Профессор, доктор мед. наук Марк Блохинг', direction: 'Отоларингология' },
-    { title: 'Профессор, доктор мед. наук Марк Блохинг', direction: 'Отоларингология' },
-    { title: 'Профессор, доктор мед. наук Марк Блохинг', direction: 'Отоларингология' },
-    { title: 'Профессор, доктор мед. наук Марк Блохинг', direction: 'Отоларингология' },
-    { title: 'Профессор, доктор мед. наук Марк Блохинг', direction: 'Отоларингология' },
-    { title: 'Профессор, доктор мед. наук Марк Блохинг', direction: 'Отоларингология' },
-];
+import ContainerSpecialists from '../components/ContainerSpecialists/ContainerSpecialists';
+
 const options = [
     { value: 'Узи', label: 'Узи' },
     { value: 'Терапевт', label: 'Терапевт' },
@@ -28,11 +13,9 @@ const options = [
     { value: 'Гинеколог', label: 'Гинеколог' },
 ];
 
+
 export default function Page() {
-    // const onChangeSelect = (selectOption: any) => {
-    //     'use server';
-    //     console.log(selectOption);
-    // };
+    
     return (
         <main>
             <Menu items={url} />
@@ -46,19 +29,11 @@ export default function Page() {
                         </div>
                     </div>
                     <div className={styles.col2}>
-                        <Select isMulti={true} options={options}/>
+                        <Select isMulti={true} options={options} />
                         <Input type="search" id={'id'} />
                     </div>
                 </div>
-                <div className={styles.containerSpecialists}>
-                    {specialists.map((specialist) => (
-                        <CardSpecialist
-                            title={specialist.title}
-                            direction={specialist.direction}
-                            key={specialist.title}
-                        />
-                    ))}
-                </div>
+                <ContainerSpecialists />
             </section>
         </main>
     );

@@ -1,4 +1,7 @@
 // import axios from 'axios'
+
+// TODO : Переписать старое апи на новое 
+// Методы взяты из старого проекта 2022
 const getListAPI = async (direction) => {
     try {
         const response = await axios.get(process.env.GET_LIST_API)
