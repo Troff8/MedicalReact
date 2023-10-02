@@ -56,7 +56,7 @@ export default function Home() {
                                 number="+78463930092"
                                 address="Чапаевск, ул.Ватутина 11"
                                 mail="kd_p09@mail.ru"
-                                schedule="Пн-Сб"
+                                schedule="Пн-Пт"
                             />
                             <CardHospital
                                 title="Безенчук"
@@ -64,7 +64,7 @@ export default function Home() {
                                 number="+79277505656" 
                                 address="Безенчук, ул.Советская 56"
                                 mail="kd_p09@mail.ru"
-                                schedule="Пн-Пт"
+                                schedule="Пн-Сб"
                             />
                         </ul>
                     </div>
